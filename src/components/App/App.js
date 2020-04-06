@@ -4,6 +4,7 @@ import './App.css';
 
 //Import Components
 import Header from '../Header/Header'
+import MonthList from '../MonthList/MonthList'
 
 class App extends Component {
   state = {
@@ -30,8 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <br/>
-        <p>List of months goes here</p>
+        <MonthList monthList={this.state.monthList}/>
       </div>
     );
   }
