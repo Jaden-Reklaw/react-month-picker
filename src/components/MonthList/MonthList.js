@@ -11,15 +11,13 @@ class MonthList extends Component {
     render() {
         //attach prop to a variable name
         let list = this.props.monthList;
-        
+
         return(
             <ul>
                 {list.map((month) => {
-                    return <MonthItem month={month.name} key={month.id}/>
+                    return <MonthItem month={month} key={month.id}/>
                 })}
             </ul>
-                
-            
             
         );
     }

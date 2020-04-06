@@ -7,7 +7,7 @@ import './MonthItem.css'
 class MonthItem extends Component {
     render() {
         return(
-            <li></li>
+        <li>{this.props.month.name}</li>
         );
     }
 }
