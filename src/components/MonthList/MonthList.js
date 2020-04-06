@@ -13,12 +13,14 @@ class MonthList extends Component {
         let list = this.props.monthList;
 
         return(
-            <ul>
-                {list.map((month) => {
-                    return <MonthItem month={month} key={month.id} handleChangeFor={this.props.handleChangeFor}/>
-                })}
-            </ul>
-            
+            <div>
+                <h2>Month List</h2>
+                <ul>
+                    {list.map((month) => {
+                        return <MonthItem month={month} key={month.id} handleChangeFor={this.props.handleChangeFor}/>
+                    })}
+                </ul>
+            </div>
         );
     }
 }

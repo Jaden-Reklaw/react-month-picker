@@ -9,7 +9,7 @@ import MonthList from '../MonthList/MonthList'
 class App extends Component {
   state = {
     monthList: [],
-    month: '',
+    month: 'make a selection',
   }
 
   //Run this as soon as App loads
@@ -28,6 +28,8 @@ class App extends Component {
       });
   }
 
+  //Create to change state for month
+  //Sent as a prop to MonthList > MonthItem
   handleChangeFor = (month) => {
     console.log(month);
     this.setState({month: month});

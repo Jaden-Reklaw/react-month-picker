@@ -5,15 +5,9 @@ import React, { Component } from 'react';
 import './MonthItem.css'
 
 class MonthItem extends Component {
-
-    clickMonth = (month) => {
-        alert(month);
-    }
-
     render() {
         return(
         <li 
-        onClick={((event) => this.clickMonth(this.props.month.name))}
         onClick={() => this.props.handleChangeFor(this.props.month.name)}
         >{this.props.month.name}</li>
         );
