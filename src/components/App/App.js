@@ -9,6 +9,7 @@ import MonthList from '../MonthList/MonthList'
 class App extends Component {
   state = {
     monthList: [],
+    month: '',
   }
 
   //Run this as soon as App loads
@@ -27,11 +28,16 @@ class App extends Component {
       });
   }
 
+  handleChangeFor = (month) => {
+    console.log(month);
+    this.setState({month: month});
+  }
+
   render() {
     return (
       <div className="App">
-        <Header />
-        <MonthList monthList={this.state.monthList}/>
+        <Header month={this.state.month}/>
+        <MonthList monthList={this.state.monthList} handleChangeFor={this.handleChangeFor}/>
       </div>
     );
   }

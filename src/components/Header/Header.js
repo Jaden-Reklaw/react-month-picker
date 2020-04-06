@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './Header.css';
 
 
-const Header = () => {
+class Header extends Component{
+  render() {
     return (
         <header>
           <h1>Select a Month</h1>
-          <h3>SELECTED MONTH GOES HERE</h3>
+          <h3>{this.props.month}</h3>
         </header>
     );
+  }   
 }
 
 export default Header;

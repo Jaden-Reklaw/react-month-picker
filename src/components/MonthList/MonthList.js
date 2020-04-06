@@ -15,7 +15,7 @@ class MonthList extends Component {
         return(
             <ul>
                 {list.map((month) => {
-                    return <MonthItem month={month} key={month.id}/>
+                    return <MonthItem month={month} key={month.id} handleChangeFor={this.props.handleChangeFor}/>
                 })}
             </ul>
             

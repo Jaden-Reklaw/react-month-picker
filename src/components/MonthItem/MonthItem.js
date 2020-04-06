@@ -12,7 +12,10 @@ class MonthItem extends Component {
 
     render() {
         return(
-        <li onClick={((event) => this.clickMonth(this.props.month.name))}>{this.props.month.name}</li>
+        <li 
+        onClick={((event) => this.clickMonth(this.props.month.name))}
+        onClick={() => this.props.handleChangeFor(this.props.month.name)}
+        >{this.props.month.name}</li>
         );
     }
 }
